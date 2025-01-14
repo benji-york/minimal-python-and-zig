@@ -11,3 +11,6 @@ clean:
 	rm -rf ve
 	rm libplay.dylib
 	rm -rf zig-cache
+
+run:
+	ve/bin/python play.py
