@@ -38,6 +38,6 @@ You can activate the virtual environment and run the Python directly if you want
 ```
 
 ```shell
-python play.py
+% python play.py
 1 + 2 = 3
 ```
