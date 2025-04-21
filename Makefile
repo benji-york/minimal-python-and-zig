@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := build
 
-libplay.dylib: play.zig
+libplay.dylib: play.zig ve
 	ve/bin/python -m ziglang build-lib play.zig -dynamic
 
 ve:
@@ -17,5 +17,5 @@ run: build
 .PHONY: clean
 clean:
 	rm -rf ve
-	rm -f libplay.dylib
+	rm -f libplay.dylib libplay.dylib.o
 	rm -rf zig-cache
