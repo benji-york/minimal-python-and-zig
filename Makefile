@@ -1,4 +1,4 @@
-build: ve libplay.dylib
+.DEFAULT_GOAL := build
 
 libplay.dylib: play.zig
 	ve/bin/python -m ziglang build-lib play.zig -dynamic
@@ -7,10 +7,15 @@ ve:
 	python -m venv ve
 	ve/bin/pip install ziglang
 
-clean:
-	rm -rf ve
-	rm libplay.dylib
-	rm -rf zig-cache
+.PHONY: build
+build: ve libplay.dylib
 
+.PHONY: run
 run: build
 	ve/bin/python play.py
+
+.PHONY: clean
+clean:
+	rm -rf ve
+	rm -f libplay.dylib
+	rm -rf zig-cache
