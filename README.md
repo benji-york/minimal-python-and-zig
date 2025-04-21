@@ -20,8 +20,8 @@ ve/bin/python play.py
 1 + 2 = 3
 ```
 
-The dependencies will be installed, the `play.zig` extention will be built and the
-Python program that calls it will be run.
+The dependencies will be installed, `play.zig` will be built into a dynamic library and
+the Python program that calls it will be run.
 
 If you run it again, everything will be up-to-date, so nothing will be rebuilt:
 
