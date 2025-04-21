@@ -12,5 +12,5 @@ clean:
 	rm libplay.dylib
 	rm -rf zig-cache
 
-run:
+run: build
 	ve/bin/python play.py

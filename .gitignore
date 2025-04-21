@@ -1,3 +1,5 @@
 libplay.dylib
 ve/
 zig-cache/
+libplay.dylib.o
+play.o

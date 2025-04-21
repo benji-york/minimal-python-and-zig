@@ -1,3 +1,4 @@
+"""Load and call some Zig code from Python."""
 import ctypes
-play = ctypes.CDLL('libplay.dylib')
-print(play.add(1, 2))
+libplay = ctypes.CDLL('libplay.dylib')
+print('1 + 2 =', libplay.add(1, 2))
